@@ -1,0 +1,73 @@
+/* Reset CSS de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Style de fond*/
+body{
+    background-color:#d8cac0 ;
+}
+/* Style de la navigation */
+.navigation {
+    background-color: #341503;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #643111;
+    border-radius: 5px;
+}
+
+/* Style de l'image de fond */
+.fond-image {
+    display: block;/*prendra toute la largeur disponible*/
+    margin: 20px auto; /* Centre l'image horizontalement */
+    border-radius: 15px; /* Bords arrondis */
+    max-width: 80%; /* Limite la taille de l'image à 90% de la largeur de son conteneur */
+    border: 2px solid white;
+
+}
+
+
+/* Media query pour les écrans moyens */
+@media (max-width: 768px) {
+    .navigation {
+        grid-template-columns: 1fr;
+        grid-row-gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .navigation a {
+        padding: 1rem;
+        width: 100%;
+    }
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 480px) {
+    .navigation {
+        padding: 0.5rem;
+    }
+
+    .navigation a {
+        padding: 0.5rem;
+    }
+
+    .fond-image {
+        width: 100%;
+        height: auto;
+    }
+}

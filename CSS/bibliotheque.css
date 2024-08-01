@@ -1,0 +1,141 @@
+/* Reset CSS de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d8cac0;
+}
+/* Style de la navigation */
+.navigation {
+    background-color: #341503;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #643111;
+    border-radius: 5px;
+}
+
+/* Section des livres */
+.Livre {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.auteur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Livrebtn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+}
+
+.Livrebtn img {
+    width: 100%;
+    height: auto;
+    max-width: 150px; /* Limite maximale pour la largeur de l'image */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.Livrebtn img:hover {
+    transform: scale(1.05);
+}
+
+.livre-details {
+    text-align: center;
+    padding: 10px;
+}
+
+.titre-livre {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+.resume-livre {
+    font-size: 0.9em;
+    color: #555;
+    margin: 0 0 10px;
+}
+
+.note-livre {
+    font-size: 1em;
+    color: #ffb400;
+}
+
+/* Media query pour les écrans moyens */
+@media (max-width: 768px) {
+    .navigation {
+        grid-template-columns: 1fr;
+        grid-row-gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .navigation a {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .Livre {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .Livrebtn img {
+        max-width: 120px;
+    }
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 480px) {
+    .navigation {
+        padding: 0.5rem;
+    }
+
+    .navigation a {
+        padding: 0.5rem;
+    }
+
+    .Livre {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .Livrebtn img {
+        max-width: 100px;
+    }
+}
+
+button:hover,
+button:focus {
+    background-color: #824d21;
+    transition: border-color 0.7s, background-color 0.7s, box-shadow 1s, transform 0.7s ease;
+    transform: scale(1.1);
+
+}
+
+img{
+    margin: 30px;
+}

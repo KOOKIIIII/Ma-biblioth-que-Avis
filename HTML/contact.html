@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../CSS/contact.css" />
+  </head>
+
+  <body>
+    <!-- barre de menu-->
+    <nav class="navigation">
+        <a href="../html/lecture.html">Accueil</a>
+        <a href="../html/bibliotheque.html">Bibliothéque</a>
+        <a href="../html/Contact.html">Contact</a>
+    </nav>
+
+
+    <form
+      id="contactForm"
+      action="#"
+      method="get"
+      enctype="multipart/form-data"
+    >
+      <header>
+        <div id="title">
+          <h1>Un avis !</h1>
+        </div>
+      </header>
+
+      <main>
+        <article>
+          <h2 class="Titre">Pour cela remplir le formulaire ci-dessous</h2>
+          <fieldset>
+            <p><br /><br />
+              <label for="ccourriel">Pseudo : </label>
+              <input
+                type="text"
+                name="pseudo"
+                id="pseudo"
+                placeholder="Entrez votre Pseudo"
+                title="Entrez votre Courriel"
+              /><br /><br />
+              <label for="csujet">Livre :  </label>
+              <input
+                type="text"
+                name="Livre"
+                id="Livre"
+                placeholder="Entrez votre titre"
+                title="Entrez votre sujet"
+              /><br /><br />
+              <label>Votre message : </label>
+              <textarea
+                name="you"
+                id="cmessage"
+                cols="50"
+                rows="5"
+                placeholder="Votre message"
+                title="Votre message"
+              ></textarea>
+              <br />
+            </p>
+          </fieldset>
+          <fieldset>
+            <div class="Envoi">
+              <input
+                type="submit"
+                id="submit"
+                value="Envoyer"
+                title="Envoyer vos données"
+              />
+              <button type="reset" id="reset">Annuler</button>
+            </div>
+          </fieldset>
+        </article>
+      </main>
+    </form>
+
+  </body>
+</html>
