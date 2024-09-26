@@ -1,0 +1,167 @@
+/* Réinitialisation des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #d8cac0;
+}
+
+/* Style de la barre de navigation */
+.navigation {
+    width: 100%;
+    background-color:  #341503;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #643111;
+    border-radius: 5px;
+}
+
+/* Style pour l'image de fond */
+.fond-image {
+    display: block;/*prendra toute la largeur disponible*/
+    margin: 20px auto; /* Centre l'image horizontalement */
+    border-radius: 15px; /* Bords arrondis */
+    max-width: 80%; /* Limite la taille de l'image à 90% de la largeur de son conteneur */
+    border: 2px solid #341503;
+
+}
+
+/* Section Vos Livres */
+.read h2 {
+    padding: 20px;
+}
+
+/* Utilisation de Grid pour structurer la section Livre */
+.Livre {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.auteur {
+    display: grid;
+    justify-items: center;
+}
+
+.Livrebtn {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    background-color: #f4f4f4;
+    border: 1px solid #643111;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Livrebtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Livrebtn img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.livre-details {
+    padding: 10px 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.titre-livre {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.resume-livre {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #666;
+}
+
+.note-livre {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #ff9900;
+    font-weight: bold;
+}
+
+/* Media query pour les écrans moyens */
+@media (max-width: 768px) {
+    .navigation {
+        grid-template-columns: 1fr;
+        grid-row-gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .navigation a {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .Livre {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .Livrebtn img {
+        max-width: 120px;
+    }
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 480px) {
+    .navigation {
+        padding: 0.5rem;
+    }
+
+    .navigation a {
+        padding: 0.5rem;
+    }
+
+    .Livre {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .Livrebtn img {
+        max-width: 100px;
+    }
+}
+
+button:hover,
+button:focus {
+    background-color: #824d21;
+    transition: border-color 0.7s, background-color 0.7s, box-shadow 1s, transform 0.7s ease;
+    transform: scale(1.1);
+
+}
+
+img{
+    margin: 30px;
+}

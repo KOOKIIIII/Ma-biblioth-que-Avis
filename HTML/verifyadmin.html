@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérification de l'Admin</title>
+    
+</head>
+<body>
+
+    <h1>Connexion Administrateur</h1>
+    <div id="loginStatus"></div>
+    
+    <!-- Formulaire de connexion -->
+    <input type="text" id="username" placeholder="Nom d'utilisateur Admin">
+    <button onclick="loginAdmin()">Se connecter en tant qu'Admin</button>
+    
+    <hr>
+
+    <!-- Bouton pour vérifier si l'utilisateur est un administrateur -->
+    <button onclick="checkAdmin()">Vérifier si vous êtes Admin</button>
+
+    <div id="result"></div>
+
+<script src="../JS/verifyadmin.js"></script>
+
+</body>
+
+</html>

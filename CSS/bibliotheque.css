@@ -10,18 +10,22 @@ body{
 }
 /* Style de la navigation */
 .navigation {
-    background-color: #341503;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem;
+    width: 100%;
+    background-color:  #341503;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .navigation a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 10px 20px;
+    margin: 0 10px;
     text-align: center;
     transition: background-color 0.3s ease;
 }
@@ -64,6 +68,10 @@ body{
 
 .Livrebtn img:hover {
     transform: scale(1.05);
+}
+
+img{
+    margin: 30px;
 }
 
 .livre-details {
@@ -128,14 +136,4 @@ body{
     }
 }
 
-button:hover,
-button:focus {
-    background-color: #824d21;
-    transition: border-color 0.7s, background-color 0.7s, box-shadow 1s, transform 0.7s ease;
-    transform: scale(1.1);
 
-}
-
-img{
-    margin: 30px;
-}
